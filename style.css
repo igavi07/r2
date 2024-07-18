@@ -1,0 +1,141 @@
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .15s;
+}
+
+@font-face {
+  font-family: sp;
+  src: url(./Assets/fonts/6edbc5d79e66b363-s.p.woff2);
+}
+
+@font-face {
+  font-family: sp1;
+  src: url(./Assets/fonts/sp1.woff2);
+}
+
+body[theme ="black"]{
+  background-color: black;
+  color: white;
+}
+
+body[theme ="white"]{
+  background-color: white;
+  color: black;
+}
+
+#nav {
+  transition: all 0.3s ease-out;
+}
+
+.plus-icon {
+  stroke-width: 1.5;
+}
+
+.content {
+  font-size: 3rem;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+  perspective: 1000;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tesla-link {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.inner-icon svg {
+  transition: transform 0.6s ease;
+}
+
+.tesla-link:hover .inner-icon svg {
+  transform: rotate(360deg);
+}
+
+.custom-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: .3rem;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: currentColor;
+  transition-duration: .3s;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+.custom-underline:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.burger-button span {
+  transition: transform 0.3s ease;
+}
+#main-nav.clicked{
+  transform: translateX(0);
+}
+
+#hide-hoja.clicked {
+  display: none;
+}
+
+.tesla-svg-path.clicked{
+  fill:black;
+}
+
+
+.desk-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+}
+
+
+.clipped-corner {
+  width: 16vw;
+  height: 8vw;
+  overflow: hidden;
+  position: relative;
+}
+
+.clipped-corner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 36%, 100% 100%, 19% 100%, 0% 75%)
+}
+
