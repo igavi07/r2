@@ -275,7 +275,7 @@
 
 
 
-            <div class="w-[50%] h-[100vh] rounded-lg relative overflow-hidden" id="scroll-right">
+            <div class="w-[50%] h-[98vh] top-[1vh] rounded-lg relative overflow-hidden" id="scroll-right">
               <div class="desk-img bg-red-700">
                 <img class="h-full w-full object-cover rounded-lg" src="./Assets/media/images/model s.avif" alt="">
               </div>
@@ -298,20 +298,69 @@
           </div>
       </div>
 
+
+      <div class="w-full relative overflow-hidden min-h-[950svh] mt-20" id="showcase">
+        <div id="showcase-pin" class="relative scale-1" > 
+          <div class="showcase-ctn h-[100vh] relative bg-white w-full flex items-center justify-center z-10 " style="clip-path: inset(0%);">
+            <img class="absolute h-40 top-32 z-10" src="./Assets/media/images/Cybertrucklogo.svg" alt="">
+            <img class="h-full w-full object-cover" src="./Assets/media/images/cybershow.avif" alt="">
+          </div>
+          <div class="video absolute top-0 left-0 h-screen w-full z-0">
+            <video autoplay loop muted class="h-full w-full object-cover" src="./Assets/media/videos/Cybertruck.mp4"></video>
+          </div>
+        </div>
+        <div id="showcase-scroll" class=" z-50 h-[250vh] w-full absolute top-0 pt-[250vh] px-20 mb-20">
+          <h1></h1>
+          <div class="pt-[150vh] flex flex-col gap-[18vh] mb-20">
+
+            <div class="w-full flex items-center justify-start">
+              <div class="h-[40vh] w-[30vw] rounded-lg overflow-hidden">
+                <img class="h-full w-full object-cover" src="./Assets/media/images/showcase1.avif" alt="">
+              </div>
+            </div>
+
+            <div class="w-full flex items-center justify-end">
+              <div class="h-[30vh] w-[27vw] overflow-hidden rounded-lg">
+                <img class="h-full w-full object-cover" src="./Assets/media/images/showcase2.avif" alt="">
+              </div>
+            </div>
+
+            <div class="w-full flex items-center justify-start ml-12 relative">
+              <img class="h-48 w-48 object-cover" src="./Assets/media/images/arrow.svg" alt="">
+              <div class="overflow-hidden absolute ">
+                <img class="texte-circle-img h-52 w-52 object-cover" src="./Assets/media/images/Texte-Circle.svg" alt="">
+              </div>
+            </div>
+
+            <div class="w-full flex items-center justify-end">
+              <div class="h-[30vh] w-[27vw] overflow-hidden rounded-lg">
+                <img class="h-full w-full object-cover" src="./Assets/media/images/showcase3.avif" alt="">
+              </div>
+            </div>
+
+            <div class="w-full flex items-center justify-start">
+              <div class="h-[30vh] w-[27vw] overflow-hidden rounded-lg">
+                <img class="h-full w-full object-cover" src="./Assets/media/images/showcase4.avif" alt="">
+              </div>
+            </div>
+
+            <div class="w-full flex items-center justify-end">
+              <div class="h-[30vh] w-[27vw] overflow-hidden rounded-lg">
+                <img class="h-full w-full object-cover" src="./Assets/media/images/showcase5.avif" alt="">
+              </div>
+            </div>
+          </div>
+          <h2></h2>
+        </div>
+      </div>
+
       <div class="h-screen w-full"></div>
+
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@0.2.28/bundled/lenis.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.6/velocity.min.js"
-      integrity="sha512-+VS2+Nl1Qit71a/lbncmVsWOZ0BmPDkopw5sXAS2W+OfeceCEd9OGTQWjgVgP5QaMV4ddqOIW9XLW7UVFzkMAw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="script.js"></script>
   </body>
 </html>

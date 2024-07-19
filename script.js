@@ -223,7 +223,63 @@ function page2() {
 
 }
 
+
+function page3(){
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#showcase-pin",
+      start: "top top",
+      end: "+=950%",
+      scrub: 1,
+      y:"950%",
+      pin:true,
+    },
+  })
+
+  tl.to(".showcase-ctn",{
+    scrollTrigger:{
+      trigger: "#showcase-pin",
+      start: "top top",
+      end: "+=150%",
+      scrub: 1,
+    },
+    "clip-path":" inset(0% 0% 100%)",
+    ease: Power2
+  })
+
+  
+  gsap.to(".texte-circle-img", {
+    rotation: 360,
+    duration: 10,
+    repeat: -1,
+    ease: "linear"
+  });
+
+  tl.to("#showcase-pin",{
+    scrollTrigger:{
+      trigger: "#showcase-scroll>h1",
+      start: "top top",
+      end: "+=130%",
+      scrub: 1,
+    },
+    scale: (.5, .5)
+  })
+
+
+  tl.to("#showcase-pin",{
+    scrollTrigger:{
+      trigger: "#showcase-scroll>h2",
+      start: "top top",
+      end: "+=130%",
+      scrub: 1,
+    },
+    scale: (1,1)
+  })
+
+}
+
 nav();
 p1();
 scroll();
 page2();
+page3()
