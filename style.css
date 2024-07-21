@@ -20,6 +20,16 @@ html.lenis {
   transition-duration: .15s;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+
+
 @font-face {
   font-family: sp;
   src: url(./Assets/fonts/6edbc5d79e66b363-s.p.woff2);
