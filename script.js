@@ -703,7 +703,6 @@ function page6() {
       start: "bottom -100%",
       end: "+=1%",
       scrub: 1,
-      markers: true,
     },
   });
 
