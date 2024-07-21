@@ -179,8 +179,8 @@ function page2() {
   gsap.to("#page2 h1 span", {
     scrollTrigger: {
       trigger: "#page2 h1",
-      start: "top 90%",
-      end: "+=50%",
+      start: "top 75%",
+      end: "+=40%",
       scrub: 2,
     },
     color: "#000",
@@ -549,7 +549,6 @@ gsap.to("#canvas img",{
     ease: "none",
   }
 })
-
 }
 
 function page3() {
@@ -643,7 +642,7 @@ function slides() {
   ScrollTrigger.create({
     trigger: ".slides",
     start: "top top",
-    end: "+=400%",
+    end: "+=500%",
     pin: ".slides",
     animation: animation,
     scrub: true,
@@ -651,6 +650,30 @@ function slides() {
 }
 
 function page5() {
+  let allh1 = document.querySelectorAll(".page5-header h1");
+  allh1.forEach(function (elem) {
+    let content = "";
+    h1 = elem.textContent;
+    let splittedText = h1.split("");
+    splittedText.forEach(function (e) {
+      content += `<span>${e}</span>`;
+    });
+    elem.innerHTML = content;
+  });
+
+  gsap.to(".page5-header h1 span", {
+    scrollTrigger: {
+      trigger: ".page5-header h1",
+      start: "top 75%",
+      end: "+=40%",
+      scrub: 2,
+    },
+    color: "#000",
+    stagger: 0.05,
+    ease: "power2.inOut",
+  });
+
+
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: "#charge-pin",
@@ -707,7 +730,7 @@ function page6() {
   });
 
   tl1.to("#main", {
-    backgroundColor: "#fff",
+    backgroundColor: "#dadada",
   });
 
   tl.to("#page6", {
@@ -745,6 +768,19 @@ function page6() {
   });
 }
 
+function footer(){
+  gsap.to(".foot-scroll",{
+    scrollTrigger: {
+      trigger: ".footer",
+      start: "top top",
+      end: "+=220%",
+      scrub: 1,
+      pin: true,
+    },
+    x:"-100%"
+  })
+}
+
 nav();
 p1();
 scroll();
@@ -754,3 +790,4 @@ page3();
 slides();
 page5();
 page6();
+footer()

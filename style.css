@@ -81,6 +81,7 @@ body[theme ="white"]{
   position: relative;
   display: inline-block;
   padding-bottom: .3rem;
+  width: fit-content;
 }
 
 .custom-underline::after {
@@ -106,6 +107,8 @@ body[theme ="white"]{
 }
 #main-nav.clicked{
   transform: translateX(0);
+  opacity: 1;
+  transition: all ease-out 0.5s;
 }
 
 #hide-hoja.clicked {
