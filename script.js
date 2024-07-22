@@ -777,8 +777,289 @@ function footer(){
       scrub: 1,
       pin: true,
     },
-    x:"-100%"
+    x:"-200%"
   })
+}
+
+function canvas1() {
+  const canvas = document.querySelector("#canvas1 canvas");
+  const context = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  window.addEventListener("resize", function () {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    render();
+  });
+
+  function files(index) {
+    var data = `
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0001.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0002.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0003.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0004.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0005.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0006.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0007.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0008.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0009.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0010.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0011.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0012.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0013.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0014.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0015.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0016.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0017.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0018.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0019.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0020.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0021.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0022.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0023.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0024.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0025.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0026.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0027.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0028.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0029.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0030.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0031.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0032.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0033.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0034.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0035.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0036.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0037.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0038.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0039.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0040.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0041.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0042.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0043.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0044.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0045.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0046.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0047.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0048.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0049.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0050.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0051.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0052.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0053.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0054.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0055.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0056.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0057.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0058.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0059.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0060.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0061.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0062.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0063.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0064.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0065.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0066.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0067.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0068.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0069.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0070.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0071.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0072.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0073.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0074.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0075.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0076.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0077.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0078.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0079.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0080.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0081.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0082.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0083.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0084.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0085.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0086.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0087.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0088.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0089.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0090.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0091.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0092.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0093.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0094.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0095.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0096.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0097.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0098.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0099.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0100.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0101.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0102.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0103.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0104.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0105.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0106.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0107.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0108.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0109.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0110.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0111.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0112.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0113.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0114.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0115.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0116.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0117.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0118.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0119.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0120.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0121.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0122.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0123.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0124.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0125.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0126.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0127.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0128.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0129.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0130.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0131.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0132.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0133.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0134.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0135.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0136.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0137.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0138.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0139.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0140.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0141.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0142.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0143.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0144.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0145.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0146.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0147.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0148.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0149.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0150.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0151.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0152.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0153.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0154.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0155.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0156.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0157.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0158.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0159.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0160.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0161.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0162.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0163.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0164.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0165.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0166.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0167.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0168.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0169.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0170.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0171.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0172.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0173.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0174.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0175.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0176.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0177.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0178.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0179.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0180.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0181.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0182.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0183.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0184.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0185.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0186.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0187.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0188.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0189.jpg
+./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0190.jpg
+
+  `;
+    return data.split("\n")[index];
+  }
+
+  const frameCount = 190;
+
+  const images = [];
+  const imageSeq = {
+    frame: 1,
+  };
+
+  for (let i = 0; i < frameCount; i++) {
+    const img = new Image();
+    img.src = files(i);
+    images.push(img);
+  }
+
+  gsap.to(imageSeq, {
+    frame: frameCount - 1,
+    snap: "frame",
+    ease: `none`,
+    scrollTrigger: {
+      scrub: 0.5,
+      trigger: `#canvas1`,
+      start: `top top`,
+      end: `350% top`,
+    },
+    onUpdate: render,
+  });
+
+  images[1].onload = render;
+
+  function render() {
+    scaleImage(images[imageSeq.frame], context);
+  }
+
+  function scaleImage(img, ctx) {
+    var canvas = ctx.canvas;
+    var hRatio = canvas.width / img.width;
+    var vRatio = canvas.height / img.height;
+    var ratio = Math.max(hRatio, vRatio);
+    var centerShift_x = (canvas.width - img.width * ratio) / 2;
+    var centerShift_y = (canvas.height - img.height * ratio) / 2;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(
+      img,
+      0,
+      0,
+      img.width,
+      img.height,
+      centerShift_x,
+      centerShift_y,
+      img.width * ratio,
+      img.height * ratio
+    );
+  }
+  ScrollTrigger.create({
+    trigger: "#canvas1",
+    pin: true,
+    start: `top top`,
+    end: `+=300%`,
+  });
+
+gsap.to("#canvas1 img",{
+  display:"none",
+  scrollTrigger:{
+    trigger: "#canvas1 img",
+    start: "top top",
+    end: "+=1%",
+    scrub:.2,
+    ease: "none",
+  }
+})
 }
 
 nav();
@@ -788,6 +1069,7 @@ page2();
 canvas()
 page3();
 slides();
+canvas1()
 page5();
 page6();
 footer()
