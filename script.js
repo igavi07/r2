@@ -1044,17 +1044,11 @@ function canvas1() {
 ./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0183.jpg
 ./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0184.jpg
 ./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0185.jpg
-./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0186.jpg
-./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0187.jpg
-./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0188.jpg
-./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0189.jpg
-./Assets/media/canvas/Charging/aspose_video_133661107269338471_out0190.jpg
-
   `;
     return data.split("\n")[index];
   }
 
-  const frameCount = 190;
+  const frameCount = 185;
 
   const images = [];
   const imageSeq = {
@@ -1110,7 +1104,7 @@ function canvas1() {
     trigger: "#canvas1",
     pin: true,
     start: `top top`,
-    end: `+=300%`,
+    end: `+=350%`,
   });
 
 gsap.to("#canvas1 img",{
