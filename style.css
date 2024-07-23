@@ -50,6 +50,12 @@ body[theme ="white"]{
   color: black;
 }
 
+.bar{
+  background-color: #333;
+  height: 100vw;
+  width: 10vw;
+}
+
 #nav {
   transition: all 0.3s ease-out;
 }

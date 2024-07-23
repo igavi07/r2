@@ -20,6 +20,68 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothScrolling();
 });
 
+function loader(){
+  document.querySelector(".loader-welcome img").style.opacity = 0
+  document.body.style.overflow = "hidden";
+
+
+  function startLoader(){
+  let counterElement = document.querySelector(".counter>h1")
+  let currentValue = 0
+
+  function updateCounter(){
+    if(currentValue == 100){
+      return;
+    }
+
+    currentValue += Math.floor(Math.random() * 10 ) + 1;
+
+    if(currentValue > 100 ){
+      currentValue = 100;
+    }
+
+    counterElement.textContent = currentValue
+
+    let delay = Math.floor(Math.random() * 200 ) + 50
+    setTimeout(updateCounter, delay)
+
+  } 
+
+  updateCounter()
+  }
+  startLoader()
+
+  gsap.to(".loader-welcome img",{
+    opacity:1,
+    duration:2,
+    ease: "power3.inOut"
+  })
+
+  let tl = gsap.timeline()
+
+  tl.to(".counter",2,{
+    delay:3.5,
+    opacity:0
+  },'a')
+
+  tl.to(".bar",1.5, {
+    delay:3.5,
+    height:0,
+    stagger:{
+      amount:0.5
+    },
+    ease: "power3.inOut"
+  },'a')
+
+  tl.to("body", {
+    overflow : "visible"
+  })
+
+  tl.to(".counter, .loader-overlay",{
+    display:"none"
+  })
+}
+
 function nav() {
   let lastScrollTop = 0;
   const navbar = document.getElementById("nav");
@@ -109,6 +171,7 @@ function p1() {
       start: "top -60%",
       end: "+=150%",
       scrub: 0.5,
+
     },
   });
 }
@@ -556,7 +619,7 @@ function page3() {
     scrollTrigger: {
       trigger: "#showcase-pin",
       start: "top top",
-      end: "+=950%",
+      end: "+=880%",
       scrub: 1,
       y: "950%",
       pin: true,
@@ -1073,3 +1136,4 @@ canvas1()
 page5();
 page6();
 footer()
+loader()
