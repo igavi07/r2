@@ -670,7 +670,7 @@ function slides() {
     scrollTrigger: {
       trigger: ".energy-header h1",
       start: "top 66%",
-      end: "+=80%",
+      end: "+=60%",
       scrub: 2,
     },
     color: "#000",
@@ -832,16 +832,31 @@ function page6() {
 }
 
 function footer(){
-  gsap.to(".foot-scroll",{
-    scrollTrigger: {
-      trigger: ".footer",
-      start: "top top",
-      end: "+=220%",
-      scrub: 1,
-      pin: true,
-    },
-    x:"-200%"
-  })
+  if(window.innerWidth>768){
+    gsap.to(".foot-scroll",{
+      scrollTrigger: {
+        trigger: ".footer",
+        start: "top top",
+        end: "+=220%",
+        scrub: 1,
+        pin: true,
+      },
+      x:"-200%"
+    })
+  }
+
+  if(window.innerWidth <= 768){
+    gsap.to(".foot-scroll",{
+      scrollTrigger: {
+        trigger: ".footer",
+        start: "top top",
+        end: "+=220%",
+        scrub: 1,
+        pin: true,
+      },
+      x:"-270%"
+    })
+  }
 }
 
 function canvas1() {
